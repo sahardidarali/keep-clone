@@ -35,7 +35,7 @@ class GoogleAuth extends Component {
             return (
                 <div style={{right:"0"}}>
                     <CreateNotes/>
-                <button style={{marginLeft:"43rem" ,marginTop:"5rem"}} onClick={() => this.auth.signOut()} className="ui red  button">
+                <button style={{marginLeft:"71rem" ,marginTop:"5rem"}} onClick={() => this.auth.signOut()} className="ui red  button">
                     <i className="google icon" />
                     SIGN OUT
                 </button>
@@ -44,7 +44,7 @@ class GoogleAuth extends Component {
         } else {
             return (
                 <div style={{right:"0"}}>
-                <button style={{marginLeft:"43rem" ,marginTop:"5.2rem"}} onClick={() => this.auth.signIn()} className="ui  green google button">
+                <button style={{marginLeft:"71rem" ,marginTop:"5.2rem"}} onClick={() => this.auth.signIn()} className="ui  green google button">
                     <i className="google icon" />
                     SIGN IN
                 </button>
