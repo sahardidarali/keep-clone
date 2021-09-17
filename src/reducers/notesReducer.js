@@ -1,7 +1,9 @@
-export default (state = { notesList: [], deletedNotes: [], archivedNotes: ['helo'], pinnedNotesList: [] }, action) => {
+export default (state = { notesList: [], deletedNotes: [], archivedNotes: [], pinnedNotesList: [] }, action) => {
     switch (action.type) {
         case 'CREATE_NOTE':
             return {
+                // ...state,
+                // notesList: [], deletedNotes: [], archivednotesList: [], pinnedNotesList: []
                 ...state,
                 notesList: [...state.notesList, action.payload]
             }
@@ -13,7 +15,23 @@ export default (state = { notesList: [], deletedNotes: [], archivedNotes: ['helo
                     return obj.title !== action.payload.title
                 })
             }
-      
+            case 'PIN_ARCHIVE_NOTE':
+
+                return {
+                    ...state,
+                    pinnedNotesList: [...state.pinnedNotesList, action.payload],
+                    archivedNotes: state.archivedNotes.filter(function (obj) {
+                        return obj.title !== action.payload.title
+                    })
+                }
+                case 'DELETE_FROM_ARCHIVE':
+                    return {
+                        ...state,
+                        deletedNotes: [...state.deletedNotes, action.payload],
+                        archivedNotes: state.archivedNotes.filter(function (obj) {
+                            return obj.title !== action.payload.title
+                        })
+                    }
         case 'PINNED_NOTE':
 
             return {

@@ -1,4 +1,7 @@
-
+body {margin:0;}
+.top-nav{
+  overflow: hidden !important;
+}
 .note{
     margin-top: 30px;
     margin-left: auto;
@@ -86,26 +89,27 @@
     display:inline-block;
     top:4.9rem;
     position:fixed;
-    width:5.3rem;
+    width:4.5rem;
     height:100%;
     background:white;
     transition:0.5s;
     overflow:hidden;
     z-index: 1;
-    left: -40px;
+    left:0;
+    
     
 }
 
 .navigation:hover,
 .navigation.active {
-    width:250px; 
+    width:14rem; 
     z-index: 1;
 }
 
 .navigation ul{
     position:absolute;
     top:0;
-    left:0;
+    left:-1rem;
     width:100%;
 }
 
@@ -113,34 +117,46 @@
 
 .navigation ul li
 {
+  font-weight: bold;
   width:100%;
     list-style:none;
-    color:#4d4d4d;
+    color: rgb(32,33,36);
     position:relative;
     display:inline-block;
     min-width:100px;
     height:45px;
     text-align:left;
-}.navigation ul li:hover
-{
-  background: rgb(194, 194, 188);
 }
-.navigation ul li .icon
+.navigation ul li:hover
 {
-  font-size: 2rem;
-    
-   
+  background-color: rgb(254,239,195);
+  border-radius: 5rem;
+  height:2.6rem;
+  margin-bottom: 0.65rem;
+
 }
 
+.navigation ul li .icon
+{
+  color: rgb(95,99,104);
+  border:2px solid rgb(254,239,195);
+  font-size: 2rem;
+    margin-left:-0.6rem;
+    margin-right:0.8rem;
+border-radius:50% ;
+background-color: rgb(254,239,195);
+height: 2.7rem;
+
+   
+}
 
     @media(max-width:767px){
 
       .navigation{
-          left:-60px;
+          left:-0;
       }
       .navigation.active {
-          left: 0;
-          width:100%;
+          width:-1rem;
 
       }
   }

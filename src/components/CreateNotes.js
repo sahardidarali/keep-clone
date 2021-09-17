@@ -109,7 +109,6 @@ const CreateNotes = (props) => {
             })
         }
     }
-    console.log(props);
     return (
         <div className="notes-view">
             <br/><br/><br/>
@@ -133,7 +132,7 @@ const mapStateToProps = state => {
         notes: state.notesReducer.notesList,
         pinnednotes: state.notesReducer.pinnedNotesList,
         deletenotes: state.notesReducer.deletedNotes,
-        archnotes: state.notesReducer.archivednotes
+        archivenotes: state.notesReducer.archivedNotes
     }
 }
 

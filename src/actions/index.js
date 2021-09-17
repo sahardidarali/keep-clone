@@ -56,6 +56,18 @@ export const archiveNote = (note) => {
         payload: note
     }
 }
+export const delArchiveNote = (note) => {
+    return {
+        type: 'DELETE_FROM_ARCHIVE',
+        payload: note
+    }
+}
+export const pinArchiveNote = (note) => {
+    return {
+        type: 'PIN_ARCHIVE_NOTE',
+        payload: note
+    }
+}
 export const pinNote = (note) => {
     return {
         type: 'PINNED_NOTE',

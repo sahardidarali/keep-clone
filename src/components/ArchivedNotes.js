@@ -17,9 +17,10 @@ const renderArchivedNote=()=>{
                             </div>
                             <div className="description">{archivednote.body}</div>
                         </div>
-                        <i className="trash alternate outline large icon" onClick={() => { props.delNote(archivednote) }}></i>
-                        <i className="trash alternate outline large icon" onClick={() => { props.pinNote(archivednote) }}></i>
-                    </div>
+                        <span><i className="trash alternate outline large icon" onClick={() => { props.delNote(archivednote) }}></i>
+                        <i className="pin  large icon" onClick={() => { props.pinNote(archivednote) }}></i>
+                   
+                   </span> </div>
                 </div>
             )
         })
@@ -36,7 +37,7 @@ const renderArchivedNote=()=>{
 const mapStateToProps = state => {
     return {
         userId: state.auth.userId,
-        archivedNotes: state.notesReducer.archivedNotesList
+        archivedNotes: state.notesReducer.archivedNotes
     }
 }
 
